@@ -1,0 +1,48 @@
+html, body{
+    min-height: 100%;
+    text-align: center;
+    font-family: sans-serif, "Helvetica";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+#canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+    width: 100vw;
+    height: 95vh;
+    background-color: rgb(163, 149, 149);
+    border: solid 3px;
+    border-radius: 10%;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 100px rgba(0, 0, 0);
+}
+
+#title {
+	font-size: 1.8em;
+}
+
+#tooltip {
+    position: absolute;
+    // top and left determined in JS with D3.js
+	// background color gets updated dynamically based on the color of the county with D3.js
+    border-radius: 5px;
+    padding: 0.5em 2em;
+    box-shadow: 0 0 3px black;
+    opacity: 0.9;
+    visibility: hidden; // hide by default
+    transition: visibility 100ms; // NOT all, nor top/left variables, as this would cause the tooltip to "glide" across the map if the user mouses out on one end of the map and mouses on at the other end of the country
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
